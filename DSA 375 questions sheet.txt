@@ -1,0 +1,124 @@
+This sheet is prepared to understand the concept and trick behind each of the 350 questions. solutions and codes are available online.(apna college)
+also check out other sheet https://seanprashad.com/leetcode-patterns/
+
+
+
+Notes to keep in mind while solvinf DSA
+{
+try to apply all methods
+methods
+{
+sorting,two pointer, hash map,prefix sum, sliding window, binary search, fast and slow pointer
+}
+Whenever we have to find a solution faster than o(n), we must apply binary search and get it into o(logn)
+}
+
+cell 13
+{ Approach:
+Reverse the array- we can use a two pointer approach where we swap the elements at the indices of the two pointers and reverse the array like that.
+Notes: while solving the question i 
+learnt strings are immutable in python.
+}
+
+14
+{Approach:
+in subarrays also think of sliding window and prefix sum
+In this problem we learn about kadanes algorithm. We must keep a look out for this algo as its used in sub array type questions. sub array is a set of contiguous elements. sub array in this \
+question can also only include only one element. The entire essence of kadanes algo is to cut off the negative subarrays and not adding them to our new sub array since it would only decrease
+its value https://www.youtube.com/watch?v=HCL4_bOd3-4 watch for better explaination.
+Notes:
+look at some of the important boundary conditions such as if the array consists of only negative elements and all that.
+max element assign it to first element and not 0 since we have negative integers in our array aswell.
+}
+
+15
+{ 
+Approach:
+in this case we have O(n^2) solution which is brute force
+secondly we can sort the array and then scan the array to pick out two adjacent numbers that are equal - time complexity O(n)
+the most optimized solution would be to use a hash set, time- O(n), space - O(n) so for python we use set()
+
+Notes:
+whenever we have some duplicate values or anything to keep count of we always have to think of hash set.
+
+
+}
+
+*16
+{
+to solve this question we must sort the array. time- O(nlogn)
+In this problem we only care about making sure that there is a min diff, there fore we must think of sorting.
+Note:
+we must understand the boundary conditions in this problem i+m-1<n
+
+}
+
+17
+{
+this question is pretty simple. Brute force method would be to just linearly scan all the elements and find the index.
+approach 2 would be use binary search.
+Since this array was sorted and then rotated we can take advantage of that sorting.
+}
+
+*18
+{
+this question is has the key to an important concept for dictiorany orders. Method 1 is that we brute force it. make a list of all the number orders (n!) permutations and then linearly scan all of them to 
+return the next one. this would take O(n!*n).
+
+better approach is the followig algorithm:
+(i) start scanning the array in the opposite direction ie from reverse till u find a break point. 
+(ii) swap that point with the next greatest element in the reverse array
+(iii) reverse the subarray to the right of the break point.
+}
+
+19
+{
+one method is to brute force it and get a solution in O(n^2). the optimal approach would be like this: We set up two pointers. one called left at the start of the array(0) and the right one
+as 1; then we run a for loop over the array and record the profit by subtracting right and left iff a[r]>a[l] or else we jus update the left pointer to l=r, and then we update the r++ outside
+the while loop.
+}
+
+
+cell 40 Valid Palindrome{
+the approach is to first understand a few special functions like tolower() and isalnum(). Use this to simply loop through all the elements. We also use two pointers to check if last and first 
+element is same so that they are palindromic.time -O(N) space O(1)
+
+}
+
+cell 41 Valid Anagram{
+	Essentially we use a hashmap itself. We make a vector with 26 units of space to represent the count of each letter. Also we learnt that letter - letter =aascii value  and this is how we 
+accessed and incremented our array indices 
+}
+
+cell 42 valid parenthesis{
+int this we can use two approaches. ONe is to compare by using a whole lotta if statements.The other one is to use an unordered map to make a pair such that we assign a number to a char and
+then add them to get 0 and  add to stacks n all dat
+}
+
+cell 43 consecutive characters{
+This is a rather simple problem all you have to do is identify where the break is happening and append that break to an empty string. Just play around witht he conditions and its pretty self 
+intuitive.
+}
+
+cell 44 sentence to number pad Q{
+I first applied an unordered map to solve this question. I made a map of <char,string> and filled in all posible 26 combinations of chars and their number pad sequence
+after that i jus ran through the loop iterating through each char of the string and kept appending the number string into res string via the map. O(N), O(N).
+
+
+
+}
+
+124
+{
+for this we use a simple iterative approach T- o(n) , space is O(1). we use 3 pointers . prev , current and next. this is how we solve the question.
+}
+
+125
+{
+in this problem we use something called floyds cycle detection algorithm. This is an important algorithm used in the cases of cycles and loops. We assign something called a slow and fast pointer
+and when the slow and fast pointer coincide we know that there is a loop.
+}
+
+
+
+
