@@ -119,6 +119,11 @@ in this problem we use something called floyds cycle detection algorithm. This i
 and when the slow and fast pointer coincide we know that there is a loop.
 }
 
+126
+{
+this problem is also simple. Make a new linked list , and write the apt if conditions to compare and keep adding those elements to said linkedlist.
+}
+
 
 
 
