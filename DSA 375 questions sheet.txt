@@ -10,7 +10,9 @@ methods
 {
 sorting,two pointer, hash map,prefix sum, sliding window, binary search, fast and slow pointer
 }
-Whenever we have to find a solution faster than o(n), we must apply binary search and get it into o(logn)
+{Tips:
+1.Whenever we have to find a solution faster than o(n), we must apply binary search and get it into o(logn)
+2.For lineked lists , some questions for example like delete certain node etc, remember that you dont always have to play with links, you can play with the data and rewrite the data so that it acts like it solves it. (ref. cell 127)
 }
 
 cell 13
