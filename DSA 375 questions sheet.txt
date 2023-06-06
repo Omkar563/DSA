@@ -131,6 +131,11 @@ this problem is also simple. Make a new linked list , and write the apt if condi
 use unordered set to filter our duplicates. O(N) , O(N)
 }
 
+129
+{
+i used a very weird way , but i used an unordered map, counted number of 0s 1s 2s, then ran a for loop to change the linked list to the desired shizz
+}
+
 
 
 
