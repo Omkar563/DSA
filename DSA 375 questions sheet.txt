@@ -11,8 +11,13 @@ methods
 sorting,two pointer, hash map,prefix sum, sliding window, binary search, fast and slow pointer
 }
 {Tips:
-1.Whenever we have to find a solution faster than o(n), we must apply binary search and get it into o(logn)
-2.For lineked lists , some questions for example like delete certain node etc, remember that you dont always have to play with links, you can play with the data and rewrite the data so that it acts like it solves it. (ref. cell 127)
+For LinkedLists
+{ # a lot of LL questions use two points approach i.e fast and slow pointer , so keep that in mind.
+1.For lineked lists , some questions for example like delete certain node etc, remember that you dont always have to play with links, you can play with the data and rewrite the data so that it acts like it solves it. (ref. cell 127)
+2.Remember to use fast n slow pointers if cycles are given , u need to do sm operation in between the LL etc. 
+3.Think of using a dummy node in a problem if its uselful
+}
+
 }
 
 cell 13
@@ -135,7 +140,13 @@ use unordered set to filter our duplicates. O(N) , O(N)
 {
 i used a very weird way , but i used an unordered map, counted number of 0s 1s 2s, then ran a for loop to change the linked list to the desired shizz
 }
+131
+{
+the naive solution is first finding the length of LL , then applying logic and getting soln. This takes time O(N).
+Optimized solution : Take two dummy nodes, who’s next will be pointing to the head. Take another node to store the head, initially,s a dummy node(start), and the next node will be pointing to the head. The reason why we are using this extra dummy node is that there is an edge case. If the node is equal to the length of the LinkedList, then this slow will point to slow’s next→ next. And we can say our dummy start node will be broken and will be connected to the slow next→ next.
 
+Start traversing until the fast pointer reaches the nth node. Now start traversing by one step both of the pointers until the fast pointers reach the end.When the traversal is done, just do the deleting part. Make slow pointers next to the next of the slow pointer to ignore/disconnect the given node. Last, return to the next start.
+}
 
 
 
