@@ -17,6 +17,12 @@ For LinkedLists
 2.Remember to use fast n slow pointers if cycles are given , u need to do sm operation in between the LL etc. 
 3.Think of using a dummy node in a problem if its uselful
 }
+For Trees
+{
+Always remember Trees are recursive. We have two ways to solve any tree problem. 1. recursive type (dfs) 2. iterative type (level order)(maintain queue)
+
+}
+
 
 }
 
@@ -148,6 +154,20 @@ Optimized solution : Take two dummy nodes, who’s next will be pointing to the 
 Start traversing until the fast pointer reaches the nth node. Now start traversing by one step both of the pointers until the fast pointers reach the end.When the traversal is done, just do the deleting part. Make slow pointers next to the next of the slow pointer to ignore/disconnect the given node. Last, return to the next start.
 }
 
+205/208
+{
+Use the IBH recursion rule and its fairly easy to solve. Recursice type Q
+}
+
+209
+{
+This is iterative type and u need to remember this pattern . Maintain a queue of visited nodes and then u can traverse it level order.
+}
+
+210/211
+{
+This is also a iterative type. Left - its the first element of all levels , Right - its the last element of all levels. Do based on this.
+}
 
 
 
